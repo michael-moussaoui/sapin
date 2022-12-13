@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--width: 400px;
+	--height: calc(var(--width) * 0.5);
+}
+
+body {
+	/* min-height: 100vh; */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #48cae4;
+}
+
+h1 {
+	font-family: "Satisfy", cursive;
+	font-size: 3.5rem;
+	position: relative;
+}
+
+.sapin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	top: 10vh;
+}
+
+.floor {
+	height: var(--height);
+	width: var(--width);
+	background-color: #386641;
+	clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.floor:nth-of-type(1) {
+	height: calc(var(--height) * 0.25);
+	width: calc(var(--width) * 0.25);
+	transform: translateY(290%);
+}
+.floor:nth-of-type(2) {
+	height: calc(var(--height) * 0.5);
+	width: calc(var(--width) * 0.5);
+	transform: translateY(120%);
+}
+.floor:nth-of-type(3) {
+	height: calc(var(--height) * 0.75);
+	width: calc(var(--width) * 0.75);
+	transform: translateY(50%);
+}
+
+.down {
+	display: flex;
+	flex-direction: columns;
+	align-items: center;
+}
+
+.wood {
+	width: 60px;
+	height: 100px;
+	background-color: #6c584c;
+}
+
+.deco {
+	position: absolute;
+	display: block;
+	z-index: 10;
+}
+
+.star {
+	background-color: #ffea00;
+	width: 70px;
+	height: 70px;
+	top: 18%;
+	clip-path: polygon(
+		50% 0%,
+		61% 35%,
+		98% 35%,
+		68% 57%,
+		79% 91%,
+		50% 70%,
+		21% 91%,
+		32% 57%,
+		2% 35%,
+		39% 35%
+	);
+}
+
+.ball {
+}
+
+.ball:nth-of-type(2n + 1) {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #d90429;
+	top: 40%;
+}
+.ball:nth-of-type(2n) {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: #2ec4b6;
+	opacity: 0;
+}
+
+.ball#ball1 {
+	right: 8rem;
+	top: 20rem;
+	-webkit-animation: animBall 1s ease-in-out infinite alternate;
+	-moz-animation: animBall1s ease-in-out infinite alternate;
+	animation: animBall 1s ease-in-out infinite alternate;
+}
+.ball#ball2 {
+	right: 12rem;
+	top: 14rem;
+	-webkit-animation: animBall 1s ease-in-out 1.5s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.5s infinite alternate;
+	animation: animBall 1s ease-in-out 1.5s infinite alternate;
+}
+.ball#ball3 {
+	right: 20rem;
+	top: 28rem;
+	-webkit-animation: animBall 1s ease-in-out 1.3s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.3s infinite alternate;
+	animation: animBall 1s ease-in-out 1.3s infinite alternate;
+}
+.ball#ball4 {
+	left: 14rem;
+	top: 29rem;
+	-webkit-animation: animBall 1s ease-in-out 1.2s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.2s infinite alternate;
+	animation: animBall 1s ease-in-out 1.2s infinite alternate;
+}
+.ball#ball5 {
+	left: 10rem;
+	top: 70%;
+	-webkit-animation: animBall 1s ease-in-out 1.6s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.6s infinite alternate;
+	animation: animBall 1s ease-in-out 1.6s infinite alternate;
+}
+.ball#ball6 {
+	left: 60%;
+	top: 60%;
+	-webkit-animation: animBall 1s ease-in-out 1.4s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.4s infinite alternate;
+	animation: animBall 1s ease-in-out 1.4s infinite alternate;
+}
+.ball#ball7 {
+	right: 70%;
+	top: 55%;
+	-webkit-animation: animBall 1s ease-in-out 1.1s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.1s infinite alternate;
+	animation: animBall 1s ease-in-out 1.1s infinite alternate;
+}
+.ball#ball8 {
+	right: 65%;
+	top: 70%;
+	-webkit-animation: animBall 1s ease-in-out 1.7s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.7s infinite alternate;
+	animation: animBall 1s ease-in-out 1.7s infinite alternate;
+}
+.ball#ball9 {
+	right: 50%;
+	top: 45%;
+	-webkit-animation: animBall 1s ease-in-out 1.4s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.4s infinite alternate;
+	animation: animBall 1s ease-in-out 1.4s infinite alternate;
+}
+.ball#ball10 {
+	right: 60%;
+	top: 55%;
+	-webkit-animation: animBall 1s ease-in-out 1.6s infinite alternate;
+	-moz-animation: animBall1s ease-in-out 1.6s infinite alternate;
+	animation: animBall 1s ease-in-out 1.6s infinite alternate;
+}
+
+svg {
+	position: absolute;
+	bottom: -10vh;
+}
+
+@keyframes animBall {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
